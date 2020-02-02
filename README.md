@@ -31,21 +31,12 @@ If your bots username is official_laudebot the method should look like below
 
 ![setUsername](images/settingUsername.png)
 
-### Set bot token as an environment variable
+### Set bot token 
 
-The project is set up so that it looks for an environment variable for the bot token. We need to setup a environment variable on our computer so it works. 
+We could insert the token directly into the getBotToken -method however this means anyone with the source code can use our unqiue bot token. That would be bad. Instead we use the dotenv package. The project has this pre-configured so all you need to is follow the steps below.
 
-**On linux/macos run the following command without the [] brackets**
-
-    echo export [INSERT VARIABLE NAME HERE]=[INSET TOKEN HERE] >> ~/.bashrc
-
-After this you may need to restart your computer
-
-### Insert the variable
-
-You've probably already guessed but next you need to insert the variable you just made into source-code. If you named your variable LAUDEBOT_TOKEN it should look like this
-
-![token](images/token.png)
+  1. Create a file called '.env' inside root directory
+  2. Inside the file write 'TOKEN=[INSERT YOUR TOKEN HERE]" without the brackets
 
 **Congratulations! Your bot should now be working!!**
 
