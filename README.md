@@ -46,6 +46,6 @@ Visit https://github.com/rubenlagus/TelegramBots/wiki for more information
 
 ### Errors
 
-If you get an error like below it means your token is not setup right. Remember to restart your computer after updating .bashrc
+If you get an error like below it means your token is not setup right.
 
 ![error](images/error.png)
