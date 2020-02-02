@@ -49,6 +49,10 @@ You've probably already guessed but next you need to insert the variable you jus
 
 **Congratulations! Your bot should now be working!!**
 
+### More information
+
+Visit https://github.com/rubenlagus/TelegramBots/wiki for more information
+
 ### Errors
 
 If you get an error like below it means your token is not setup right. Remember to restart your computer after updating .bashrc
