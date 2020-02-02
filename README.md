@@ -1,5 +1,9 @@
 # Welcome to Laudekoodit 2020
 
+TODO:
+  * Make this guide better 
+  * Explain the api better(?) 
+
 ## Requirements
 
   - Telegram
