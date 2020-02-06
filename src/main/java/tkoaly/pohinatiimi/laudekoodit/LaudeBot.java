@@ -42,6 +42,6 @@ public class LaudeBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return dotenv.get("TOKEN");
+        return dotenv.get("BOT_TOKEN");
     }
 }
