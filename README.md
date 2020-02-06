@@ -1,52 +1,48 @@
 # Welcome to Laudekoodit 2020
 
-TODO:
-  * Make this guide better 
-  * Explain the api better(?) 
+## Prerequisites
 
-## Requirements
-
-  - Telegram
-  - Working version of java
-  - git
-  - Code editor such as Netbeans or vscode
+  - Telegram account
+  - Some knowledge of git
 
 ## Creating your first bot
 
-1. Go to https://telegram.me/BotFather
-2. Send message '/newbot'
-3. Follow instructions
+1. Fork or clone this repository
+2. Go to https://telegram.me/BotFather
+3. Send message '/newbot'
+4. Follow instructions
 
 Your conversation should look something like this
 
+**Copy the blurred line of text from your conversation, it is called a token and is vital for the next step**
+
 ![conversation](images/laudekoodit.png)
 
-You can now start messaging your bot but as expected it does not answer anything. Start by forking this repository onto your own computer. This can be done by clicking the fork button on the github page.
+## Connecting code to the bot
 
-## Connecting your bot
+**If you haven't already now is the time to fork or clone this repository.**
 
-Open up this project on your favorite code editor. Inside src/main/java/tkoaly/pohinatiimi/laudekoodit are the files we are gonna be working with. Especially LaudeBot.java.
+Next we need to connect the code in this repository to the bot we just created.
 
-### Set bot username
+1. Create a file called '.env' inside project root directory*
+2. Inside .env write 'BOT_TOKEN=[INSERT TOKEN YOU COPIED HERE]' without the [] brackets
 
-Next open up LaudeBot.java and insert the username you gave your bot into to the getBotUsername -method.
+*Root directory is the same directory with pom.xml, README.md etc.
 
-If your bots username is official_laudebot the method should look like below
+Well done! We are almost finished.
 
-![setUsername](images/settingUsername.png)
+3. Open up Laudebot.java
+4. Within the getBotUsername -method insert your bots username
 
-### Set bot token 
+If your bots name is offical_laudebot the method should look like this
 
-We could insert the token directly into the getBotToken -method however this means anyone with the source code can use our unqiue bot token. That would be bad. Instead we use the dotenv package. The project has this pre-configured so all you need to is follow the steps below.
+![username](./images/settingUsername.png)
 
-  1. Create a file called '.env' inside root directory
-  2. Inside the file write 'TOKEN=[INSERT YOUR TOKEN HERE]" without the brackets
-
-**Congratulations! Your bot should now be working!!**
+**Congratulation your bot is now finished. Run the code and test it out**
 
 ### More information
 
-Visit https://github.com/rubenlagus/TelegramBots/wiki for more information
+Next you probably want start hacking and hustling on your teams bot. I've heavily commented Laubebot.java so you can use it as starting point for your own. For more detailed informatio visit https://github.com/rubenlagus/TelegramBots/wiki 
 
 ### Errors
 
