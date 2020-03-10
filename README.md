@@ -1,4 +1,4 @@
-# Welcome to Laudekoodit 2020
+# Example bot and guide
 
 ## Prerequisites
 
@@ -43,6 +43,8 @@ If your bots name is offical_laudebot the method should look like this
 ### More information
 
 Next you probably want start hacking and hustling on your teams bot. I've heavily commented Laubebot.java so you can use it as starting point for your own. For more detailed informatio visit https://github.com/rubenlagus/TelegramBots/wiki 
+
+You can also ask for help from out telegram-channel at: https://t.me/laudekoodit
 
 ### Errors
 
