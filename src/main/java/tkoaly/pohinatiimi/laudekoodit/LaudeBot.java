@@ -20,14 +20,22 @@ public class LaudeBot extends TelegramLongPollingBot {
 
         Long chatId = update.getMessage().getChatId();
         String text = update.getMessage().getText();
-
+        if (text.toLowerCase().contains("fakta")) {
+        SendMessage hmm = new SendMessage()
+                .setChatId(chatId);
+        hmm.setText("Hmm...");
+        try {
+        execute(hmm);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
         // Initialize answer message
         SendMessage answer = new SendMessage()
                 .setChatId(chatId);
 
         Random r = new Random();
         try (Stream<String> all_lines =
-            Files.lines(Paths.get("testitiedosto.txt"))) {
+            Files.lines(Paths.get("testi.txt"))) {
             String sl = all_lines.skip(r.nextInt(500)).findFirst().get();
         
             
@@ -36,12 +44,13 @@ public class LaudeBot extends TelegramLongPollingBot {
         } catch (Exception e) {
             System.out.println("Virhe: " + e.getMessage());
         }
-
+        
         // Send message
         try {
             execute(answer);
         } catch (TelegramApiException e) {
             e.printStackTrace();
+        }
         }
     }
 
