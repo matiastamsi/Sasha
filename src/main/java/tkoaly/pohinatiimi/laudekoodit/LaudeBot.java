@@ -7,6 +7,9 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import io.github.cdimascio.dotenv.Dotenv;
 import java.util.*;
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class LaudeBot extends TelegramLongPollingBot {
 
@@ -23,15 +26,12 @@ public class LaudeBot extends TelegramLongPollingBot {
                 .setChatId(chatId);
 
         Random r = new Random();
-        try (Scanner tiedostonLukija = new Scanner(new File("testitiedosto.txt"))) {
-            int j = 1 + r.nextInt(500);
-            // luetaan tiedostoja kunnes kaikki rivit on luettu
-           
-            for (int i = 0; i < j; i++) {
-                tiedostonLukija.nextLine();
-            }
+        try (Stream<String> all_lines =
+            Files.lines(Paths.get("testitiedosto.txt"))) {
+            String sl = all_lines.skip(r.nextInt(500)).findFirst().get();
+        
             
-            System.out.println(tiedostonLukija.nextLine());
+            answer.setText(sl);
             
         } catch (Exception e) {
             System.out.println("Virhe: " + e.getMessage());
