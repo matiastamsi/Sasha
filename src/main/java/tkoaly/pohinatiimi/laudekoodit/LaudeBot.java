@@ -20,7 +20,8 @@ public class LaudeBot extends TelegramLongPollingBot {
 
         Long chatId = update.getMessage().getChatId();
         String text = update.getMessage().getText();
-        if (text.toLowerCase().contains("fakta")) {
+        if (text.toLowerCase().contains("fakta") ||
+                text.toLowerCase().contains("fact")) {
         SendMessage hmm = new SendMessage()
                 .setChatId(chatId);
         hmm.setText("Hmm...");
@@ -36,6 +37,7 @@ public class LaudeBot extends TelegramLongPollingBot {
         Random r = new Random();
         try (Stream<String> all_lines =
             Files.lines(Paths.get("testi.txt"))) {
+            
             String sl = all_lines.skip(r.nextInt(500)).findFirst().get();
         
             
