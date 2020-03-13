@@ -21,8 +21,8 @@ public class LaudeBot extends TelegramLongPollingBot {
         Long chatId = update.getMessage().getChatId();
         String text = update.getMessage().getText();
         
-        if (text.toLowerCase().contains("fakta")
-                || text.toLowerCase().contains("fact")) {
+        if (text.toLowerCase().equals("fakta")
+                || text.toLowerCase().equals("fact")) {
             SendMessage hmm = new SendMessage()
                     .setChatId(chatId);
             hmm.setText("Hmm...");
